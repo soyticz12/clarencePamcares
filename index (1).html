@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone PAMCares</title>
+    <!-- Link to Boxicons for icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../Styling/style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <button class="sidebar-toggle" id="toggleSidebar">
+        <i class="bx bx-menu icon"></i>
+        <div class="text">
+          <span class="main-text">PAMCARES</span>
+          <span class="sub-text">ADMIN</span>
+        </div>
+      </button>
+      <div class="sidebar-content">
+        <!-- Dashboard -->
+        <div class="service" id="dashboard">
+          <a href="Dashboard/dashboard.html" class="dashboard-link">
+            <span>
+              <i class="bx bx-home icon"></i>
+              <span class="text">Dashboard</span>
+            </span>
+          </a>
+        </div>
+        <!-- Pet Information -->
+        <div class="service" data-dropdown-id="pet-info-dropdown">
+          <span>
+            <i class="bx bx-bone icon"></i>
+            <span class="text">Pet Information</span>
+          </span>
+          <div id="pet-info-dropdown" class="dropdown-content">
+            <a href="../Pages/Pet Information/managepetowners.html"
+              >Manage Pet Owners</a
+            >
+            <a href="../Pages/Pet Information/managepetinfo.html"
+              >Manage Pet Information</a
+            >
+            <a href="../Pages/Pet Information/managepettransac.html"
+              >Manage Pet Transactions</a
+            >
+            <a href="../Pages/Pet Information/managepetmedicalrecords.html"
+              >Manage Medical Records</a
+            >
+          </div>
+        </div>
+        <!-- Appointments (Walk-In) -->
+        <div class="service" data-dropdown-id="walk-in-dropdown">
+          <span>
+            <i class="bx bx-calendar-check icon"></i>
+            <span class="text">Appointments (Walk-In)</span>
+          </span>
+          <div id="walk-in-dropdown" class="dropdown-content">
+            <a href="../Pages/Appoinment Walk in/managedoctorinfo.html"
+              >Manage Doctor Information</a
+            >
+            <a href="../Pages/Appoinment Walk in/managedoctorsched.html"
+              >Manage Doctor Schedules</a
+            >
+            <a href="../Pages/Appoinment Walk in/managewalkinreservation.html"
+              >Manage Walk-In Reservations</a
+            >
+            <a href="../Pages/Appoinment Walk in/generatewalkinreport.html"
+              >Generate Walk-In Reports</a
+            >
+          </div>
+        </div>
+        <!-- Appointments (Online) -->
+        <div class="service" data-dropdown-id="online-dropdown">
+          <span>
+            <i class="bx bx-calendar-edit icon"></i>
+            <span class="text">Appointments (Online)</span>
+          </span>
+          <div id="online-dropdown" class="dropdown-content">
+            <a href="../Pages/Appoinment Online/manageteleconsult.html"
+              >Manage Teleconsultations</a
+            >
+            <a href="../Pages/Appoinment Online/manageonlinereservation.html"
+              >Manage Online Reservations</a
+            >
+            <a href="../Pages/Appoinment Online/generateonlinereport.html"
+              >Generate Online Reports</a
+            >
+          </div>
+        </div>
+        <!-- Services Management -->
+        <div class="service" data-dropdown-id="services-dropdown">
+          <span>
+            <i class="bx bx-wrench icon"></i>
+            <span class="text">Services Management</span>
+          </span>
+          <div id="services-dropdown" class="dropdown-content">
+            <a href="../Pages/Services Management/manageservices.html"
+              >Manage Services</a
+            >
+            <a href="../Pages/Services Management/updateserviceschedule.html"
+              >Update Service Schedules</a
+            >
+          </div>
+        </div>
+        <!-- User Management -->
+        <div class="service" data-dropdown-id="user-management-dropdown">
+          <span>
+            <i class="bx bx-user icon"></i>
+            <span class="text">User Management</span>
+          </span>
+          <div id="user-management-dropdown" class="dropdown-content">
+            <a href="../Pages/User Management/manageusers.html">Manage Users</a>
+            <a href="../Pages/User Management/managestaff.html">Manage Staff</a>
+          </div>
+        </div>
+        <!-- Reservations Management -->
+        <div class="service" data-dropdown-id="reservations-dropdown">
+          <span>
+            <i class="bx bx-bookmark icon"></i>
+            <span class="text">Reservations Management</span>
+          </span>
+          <div id="reservations-dropdown" class="dropdown-content">
+            <a href="../Pages/Reservation Management/managewalkolreserv.html"
+              >Manage Reservations (Walk-In & Online)</a
+            >
+            <a
+              href="../Pages/Reservation Management/confirmcancelreservation.html"
+              >Confirm/Cancel Reservations</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="top-bar">
+      <div class="top-bar-logo">
+        <img src="../Images/image.png" alt="Logo" />
+        <span class="top-bar-text">PHILIPPINE ANIMAL MEDICAL CENTER</span>
+      </div>
+      <div class="top-bar-icons">
+        <!-- Email Icon and Dropdown -->
+        <div class="notification-dropdown">
+          <i class="bx bx-envelope icon"></i>
+          <div class="dropdown-content notifications">
+            <p>No new emails</p>
+            <!-- Example email content; replace with actual form or content as needed -->
+          </div>
+        </div>
+        <!-- Bell Icon and Dropdown -->
+        <div class="notification-dropdown">
+          <i class="bx bx-bell icon"></i>
+          <div class="dropdown-content notifications">
+            <p>No new notifications</p>
+            <!-- Example notification content; replace with actual form or content as needed -->
+          </div>
+        </div>
+        <!-- Profile Icon and Dropdown -->
+        <div class="profile">
+          <img src="../Images/image.png" alt="User Profile Picture" />
+          <div class="profile-dropdown">
+            <div class="profile-dropdown-content">
+              <a href="../Pages/Profile & Settings/Profile/profile.html"
+                >Profile</a
+              >
+              <a href="#">Settings</a>
+              <hr />
+              <a
+                href="../Pages/Profile & Settings/Profile/profile.html"
+                class="logout"
+                >Log Out</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <iframe id="content-frame" src="" frameborder="0"></iframe>
+    </div>
+    <script src="../JavaScript/script.js"></script>
+  </body>
+</html>
